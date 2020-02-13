@@ -1,0 +1,38 @@
+﻿@model IEnumerable<OnlineRealEstateEntity.Land>
+
+@{
+    ViewBag.Title = "DisplayDetails";
+}
+
+<head>
+    <style>
+        #table {
+            border-spacing: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<h2>DisplayDetails</h2>
+<table class="table">
+    <tr>
+        <td> Land ID</td>
+        <td>Property Type</td>
+        <td>Location</td>
+        <td> Area(in sq.ft)</td>
+
+    </tr>
+    Temp data
+    @foreach (OnlineRealEstateEntity.Land item in (List<OnlineRealEstateEntity.Land>)TempData["land"])
+    {
+        <tr>
+            <td> @item.landId</td>
+            <td>@item.propertyType</td>
+            <td>@item.location</td>
+            <td> @item.area</td>
+
+        </tr>
+    }
+</table>
+
+
