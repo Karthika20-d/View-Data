@@ -37,6 +37,7 @@ namespace OnlineRealEstateRepositary
             landValue.propertyType = land.propertyType;
             landValue.location = land.location;
         }
+
         public static Land GetLandById(int landId)
         {
             return lands.Find(id => id.landId == landId);
