@@ -1,9 +1,9 @@
-﻿@model IEnumerable<OnlineRealEstateEntity.Land>
+﻿@model OnlineRealEstateRepositary.LandRepositary
 
 @{
     ViewBag.Title = "DisplayDetails";
 }
-
+@Html.ActionLink("Add new details","Create")
 <head>
     <style>
         #table {
@@ -15,6 +15,7 @@
 
 <h2>DisplayDetails</h2>
 <table class="table">
+
     <tr>
         <td> Land ID</td>
         <td>Property Type</td>
@@ -30,6 +31,10 @@
             <td>@item.propertyType</td>
             <td>@item.location</td>
             <td> @item.area</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.landId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.landId })
+            </td>
 
         </tr>
     }

@@ -135,6 +135,8 @@
     <Content Include="Views\Land\DisplayLandDetails.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Land\Create.cshtml" />
+    <Content Include="Views\Land\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

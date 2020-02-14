@@ -1,0 +1,55 @@
+﻿@model OnlineRealEstateEntity.Land
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using(Html.BeginForm("Create","Land",FormMethod.Post))
+{
+<table>
+    <tr>
+        <td>
+            @Html.Label("Land id")
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.landId)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Land area in sq.ft")
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.area)
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.Label("Land Property type")
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.propertyType)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Land location")
+        </td>
+        <td>
+            @Html.TextBoxFor(Model => Model.location)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Back", "DisplayLandDetails")
+        </td>
+        <td>
+            <input type="submit" id="=submit" />
+        </td>
+    </tr>
+</table>
+}
+

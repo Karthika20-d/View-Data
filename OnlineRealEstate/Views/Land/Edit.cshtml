@@ -1,0 +1,41 @@
+﻿@model OnlineRealEstateEntity.Land
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm("Update","Land",FormMethod.Post))
+{
+    @Html.HiddenFor(Model=>Model.landId)
+<table>
+    <tr>
+        <td>Land Area</td>
+        <td>
+            @Html.EditorFor(Model => Model.area)
+        </td>
+    </tr>
+    <tr>
+        <td>Property type</td>
+        <td>
+            @Html.EditorFor(Model => Model.propertyType)
+        </td>
+    </tr>
+    <tr>
+        <td>location</td>
+        <td>
+            @Html.EditorFor(Model => Model.location)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Cancel", "DisplayLandDetails")
+        </td>
+        <td>
+            <input type="submit"value="Submit" />
+        </td>
+    </tr>
+
+</table>
+}
+
